@@ -14,7 +14,7 @@ library(dplyr)
 # import data
 # getwd()
 library(readr)
-dataall_f <- read_csv("Desktop/Thesis code/model data/dataall_f.csv", 
+dataall_f <- read_csv(".../dataall_f.csv", 
                       col_types = cols(...1 = col_skip()))
 dataall <- dataall_f
 head(dataall)

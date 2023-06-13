@@ -1,9 +1,9 @@
 
-# Import Framingham data
+# Import data
 
 library(readr)
 library(tidyverse)
-data <- read.csv("/Users/r/Desktop/Thesis code/framingham_raw.csv", 
+data <- read.csv("/.../framingham_raw.csv", 
                    header = TRUE, sep = "\t", dec = ",", na.strings = " ",
                  stringsAsFactors = TRUE)
 
@@ -106,7 +106,7 @@ view(data)
 summary(data)
 
 # export prepared SOC data
-write.csv(data, "/Users/r/Desktop/Thesis code/model data/datasoc_f.csv")
+write.csv(data, "/.../datasoc_f.csv")
 
 # SOC+box data integration
 databox <- read_csv("Desktop/Thesis code/model data/databox.csv", 
@@ -115,5 +115,5 @@ dataall_f = rbind(data,databox)
 summary(dataall_f)
 
 # export prepared data for model
-write.csv(dataall_f, "/Users/r/Desktop/Thesis code/model data/dataall_f.csv")
+write.csv(dataall_f, "/.../dataall_f.csv")
 

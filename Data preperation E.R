@@ -2,11 +2,11 @@ library(readr)
 library(tidyverse)
 
 ##### death data
-elan_pat0 <- read.csv("/Users/r/Desktop/Thesis code/elan/PAT.csv", 
+elan_pat0 <- read.csv("/.../PAT.csv", 
                      header = TRUE, sep = "\t", dec = ",", na.strings = " ",
                      stringsAsFactors = TRUE)
 
-elan_pat <- read.csv("/Users/r/Desktop/Thesis code/elan/PAT.csv", 
+elan_pat <- read.csv("/.../PAT.csv", 
                  header = TRUE, sep = "\t", dec = ",", na.strings = " ",
                  stringsAsFactors = TRUE)
 
@@ -147,7 +147,7 @@ datasoc_e <- rbind(datasoc_e,elan_acute_after)
 summary(datasoc_e)
 
 # export prepared SOC data
-write.csv(datasoc_e, "/Users/r/Desktop/Thesis code/model data/datasoc_e.csv")
+write.csv(datasoc_e, "/.../datasoc_e.csv")
 
 ##### SOC+box data integration
 databox <- read_csv("Desktop/Thesis code/model data/databox.csv", 
@@ -159,4 +159,4 @@ dataall_e <- distinct(dataall_e)
 summary(dataall_e)
 
 # export prepared data for model
-write.csv(dataall_e, "/Users/r/Desktop/Thesis code/model data/dataall_e.csv")
+write.csv(dataall_e, "/.../dataall_e.csv")
